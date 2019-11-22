@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{asset('vendors/owl-carousel/owl.carousel.min.css')}}" />
     <link rel="stylesheet" href="{{asset('vendors/nice-select/css/nice-select.css')}}" />
     <!-- main css -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
         <script src="{{ asset('js/app.js') }}" defer></script>
 
   </head>
@@ -130,7 +130,7 @@
 </div> 
 
 
-  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('vendors/nice-select/js/jquery.nice-select.min.js')}}"></script>
     <script src="{{asset('vendors/owl-carousel/owl.carousel.min.js')}}"></script>
