@@ -34,4 +34,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/module/makeReview/{id}/{code}', [
         'uses' => 'ReviewController@makeReview', 'as' => 'module.make.review'
     ]);
+
+    Route::get('/search', [
+        'uses' => 'ModulesController@searcher', 'as' => 'search'
+    ]);
 });

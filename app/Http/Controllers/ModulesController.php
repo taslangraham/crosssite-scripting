@@ -25,4 +25,18 @@ class ModulesController extends Controller
             'reviews' => $reviews
         ]));
     }
+
+    public function searcher(Request $request)
+    {
+
+        $query = $request->module_name;
+
+        $modules = modules::where('name', 'like', '%' . $query . '%')
+            ->orWhere('code', 'like', '%' . $query . '%')->get();
+
+        return view('modules')->with([
+            'modules' => $modules,
+            'query' => $request->module_name
+        ]);
+    }
 }
